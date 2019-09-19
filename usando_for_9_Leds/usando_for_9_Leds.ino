@@ -1,0 +1,27 @@
+int pinLed[9]= {12,11,10,9,8,7,6,5,4};
+int numeroLed;
+
+void setup() {
+  // put your setup code here, to run once:
+
+int x;
+
+  for(x = 0; x <= 8; x++){
+    pinMode(pinLed[x], OUTPUT);
+  }
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+for(numeroLed = 0; numeroLed <= 8; numeroLed = numeroLed + 1){
+  digitalWrite(pinLed[numeroLed], HIGH);
+  delay(10);
+}
+
+for(numeroLed=8; numeroLed>=0; numeroLed=numeroLed-1){
+  digitalWrite(pinLed[numeroLed], LOW);
+  delay(50);
+}
+
+}
